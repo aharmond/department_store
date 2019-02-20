@@ -1,0 +1,7 @@
+<h1>Departments Index</h1>
+<%= link_to 'Add Department', new_department_path %>
+<ul>
+  <% @departments.each do |department| %>
+    <li><%= link_to department.name, @department %></li>
+  <% end %>
+</ul>
