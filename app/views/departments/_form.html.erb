@@ -5,3 +5,8 @@
   <%= f.text_field :name, required: true, autofocus: true %>
   <%= f.submit %>
 <% end %>
+<% if @department.id == nil %>
+  <%= link_to 'Back to Index', root_path %>
+<% else %>
+  <%= link_to 'Back to Department', department_path(@department) %>
+<% end %>

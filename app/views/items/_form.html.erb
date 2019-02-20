@@ -12,3 +12,8 @@
 
   <%= f.submit %>
 <% end %>
+<% if @item.id == nil %>
+  <%= link_to 'Back to Department', department_path(@department) %>
+<% else %>
+  <%= link_to 'Back to Item', department_item_path(@department, @item) %>
+<% end %>
