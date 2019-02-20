@@ -2,6 +2,7 @@
 <%= link_to 'Add Department', new_department_path %>
 <ul>
   <% @departments.each do |department| %>
-    <li><%= link_to department.name, @department %></li>
+    <li><%= link_to department.name, department_path(department) %></li>
+    <%= link_to 'Remove Department', department, method: :delete %>
   <% end %>
 </ul>
